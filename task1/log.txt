@@ -1,0 +1,12 @@
+$ git log
+commit c5cc1d2dcb0fb9805c5cfa7417c34193bee26690 (HEAD -> master)
+Author: MariaYanovich <maryanovichs@gmail.com>
+Date:   Thu Feb 14 16:57:43 2019 +0300
+
+    add status.txt
+
+commit 9ef9b3b286d06dcf023bf33d0263ff1598d0c302
+Author: MariaYanovich <maryanovichs@gmail.com>
+Date:   Thu Feb 14 16:55:00 2019 +0300
+
+    add .gitignore

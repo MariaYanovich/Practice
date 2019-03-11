@@ -177,7 +177,7 @@ button {
 
 button:before {
     content: "\f002";
-    font-family: FontAwesome;
+    font-family: FontAwesome, serif;
     font-size: 16px;
     color: white;
 }

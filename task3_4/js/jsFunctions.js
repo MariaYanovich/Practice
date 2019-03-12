@@ -42,7 +42,7 @@ var postsActions = (function () {
         res = res.slice(skip, skip + top);
         return res;
     }
-    
+
 
 
     function getPostByID(id) {
@@ -161,9 +161,7 @@ var postsActions = (function () {
 
         editPost: editPost,
 
-        removePost: removePost,
-
-        checkTagForExistanceIn: checkTagForExistanceIn
+        removePost: removePost
     }
 
 

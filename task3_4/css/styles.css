@@ -272,7 +272,7 @@ li.show {
 
 @media (min-width: 100px) {
     .main-item {
-        width: 40%;
+        width: 50%;
     }
 
     .header-row {

@@ -2,9 +2,9 @@ var manyPosts=[
     {
         id: "1",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-08-2018"),
+        createdAt: new Date("11-08-2018"),
         location:"Beijing, China",
-        tag: ['apps'],
+        tag: ['masha'],
         author: "Lana Rey",
         photoLink: "images/image-1.jpg"
     },
@@ -12,29 +12,29 @@ var manyPosts=[
     {
         id: "2",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-07-2018"),
+        createdAt: new Date("10-07-2018"),
         location:"Beijing, China",
         tag: ['apps', 'sport'],
-        author: "Lana Rey",
+        author: "Kaya Rey",
         photoLink: "images/image-1.jpg"
     },
 
     {
         id: "3",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-12-2019"),
+        createdAt: new Date("07-12-2019"),
         location:"Beijing, China",
         tag: ['apps', "sport"],
-        author: "Lana Rey",
+        author: "Mara Rey",
         photoLink: "images/image-1.jpg"
     },
 
     {
         id: "4",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-02-2018"),
+        createdAt: new Date("03-02-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Vera Rey",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -42,9 +42,9 @@ var manyPosts=[
     {
         id: "5",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-12-2018"),
+        createdAt: new Date("05-12-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Le Kel",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -52,19 +52,19 @@ var manyPosts=[
     {
         id: "6",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-03-2018"),
+        createdAt: new Date("11-03-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
-        tag: ['apps', "sport"],
+        author: "Mara Rey",
+        tag: ['apps', "masha"],
         photoLink: "images/image-1.jpg"
     },
 
     {
         id: "7",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-12-2018"),
+        createdAt: new Date("01-11-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Lana Heko",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -72,9 +72,9 @@ var manyPosts=[
     {
         id: "8",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("16-12-2018"),
+        createdAt: new Date("03-12-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Katy Sa",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -84,7 +84,7 @@ var manyPosts=[
         description: "Figure skating at the Olympiad-2018!",
         createdAt: new Date("10-12-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Sara Li",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -92,18 +92,18 @@ var manyPosts=[
     {
         id: "10",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-12-2018"),
+        createdAt: new Date("08-12-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Mi Hao",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
     {
         id: "11",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-12-2018"),
+        createdAt: new Date("01-18-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Ara Sac",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -111,9 +111,9 @@ var manyPosts=[
     {
         id: "12",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-11-2018"),
+        createdAt: new Date("06-11-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Mu Sed",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -121,9 +121,9 @@ var manyPosts=[
     {
         id: "13",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-01-2018"),
+        createdAt: new Date("06-01-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Jork Rey",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -131,9 +131,9 @@ var manyPosts=[
     {
         id: "14",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-05-2018"),
+        createdAt: new Date("05-05-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Stan Man",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -141,18 +141,18 @@ var manyPosts=[
     {
         id: "15",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-12-2018"),
+        createdAt: new Date("04-12-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Siri Rey",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
     {
         id: "16",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-12-2018"),
+        createdAt: new Date("01-01-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Ana Hery",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -160,9 +160,9 @@ var manyPosts=[
     {
         id: "17",
         description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-12-2018"),
+        createdAt: new Date("01-06-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Lara Rex",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -172,7 +172,7 @@ var manyPosts=[
         description: "Figure skating at the Olympiad-2018!",
         createdAt: new Date("11-12-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Mona Teury",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -182,7 +182,7 @@ var manyPosts=[
         description: "Figure skating at the Olympiad-2018!",
         createdAt: new Date("02-12-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Kira Kelly",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     },
@@ -192,7 +192,7 @@ var manyPosts=[
         description: "Figure skating at the Olympiad-2018!",
         createdAt: new Date("03-12-2018"),
         location:"Beijing, China",
-        author: "Lana Rey",
+        author: "Stivi Mix",
         tag: ['apps', "sport"],
         photoLink: "images/image-1.jpg"
     }

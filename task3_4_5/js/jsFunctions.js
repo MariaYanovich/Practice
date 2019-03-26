@@ -1,5 +1,4 @@
 var postsActions = (function () {
-    var tags = [];
 
     function sortPostsByDate(somePost) {
         somePost.sort(function (a, b) {
@@ -12,13 +11,14 @@ var postsActions = (function () {
     }
 
     function getPhotoPosts(skip = 0, top = 10, filterConfig) {
-        var res = manyPosts.slice();
+        var res = photoPosts.slice();
         sortPostsByDate(res);
         if (filterConfig.author) {
             res = res.filter(function (post) {
                 return post.author.toLowerCase() === filterConfig.author.toLowerCase();
             });
         }
+
         if (filterConfig.createdAt) {
             res = res.filter(function (post) {
                 return post.createdAt.getDate() === new Date(filterConfig.createdAt).getDate();
@@ -47,10 +47,10 @@ var postsActions = (function () {
 
     function getPostByID(id) {
         var flag = false;
-        for (var i = 0; i < manyPosts.length; i++) {
-            if (manyPosts[i].id === id) {
+        for (var i = 0; i < photoPosts.length; i++) {
+            if (photoPosts[i].id === id) {
                 flag = true;
-                return manyPosts[i];
+                return photoPosts[i];
             }
         }
         if (!flag) {
@@ -103,13 +103,13 @@ var postsActions = (function () {
 
     function addPost(post) {
         if (validatePost(post)) {
-            for (var i = 0; i < manyPosts.length; i++) {
-                if (manyPosts[i].id === post.id) {
+            for (var i = 0; i < photoPosts.length; i++) {
+                if (photoPosts[i].id === post.id) {
                     console.log("Post with the same ID already exists");
                     return false;
                 }
             }
-            manyPosts.push(post);
+            photoPosts.push(post);
             return true;
         } else return false;
     }
@@ -124,9 +124,9 @@ var postsActions = (function () {
         if (post.photoLink) clone.photoLink = post.photoLink;
 
         if (validatePost(clone)) {
-            for (var i = 0; i < manyPosts.length; i++) {
-                if (manyPosts[i].id === postID) {
-                    manyPosts[i] = clone;
+            for (var i = 0; i < photoPosts.length; i++) {
+                if (photoPosts[i].id === postID) {
+                    photoPosts[i] = clone;
                     return true;
                 }
             }
@@ -136,8 +136,8 @@ var postsActions = (function () {
 
     function removePost(id) {
         var index = 0;
-        for (var i = 0; i < manyPosts.length; i++) {
-            if (manyPosts[i].id === id) {
+        for (var i = 0; i < photoPosts.length; i++) {
+            if (photoPosts[i].id === id) {
                 index = i;
                 break;
             }
@@ -146,7 +146,7 @@ var postsActions = (function () {
             console.log("No post with such id");
             return false;
         }
-        manyPosts.splice(index, 1);
+        photoPosts.splice(index, 1);
         return true;
     }
 
@@ -179,7 +179,12 @@ console.log(postsActions.getPhotoPosts(0, 20, {
     createdAt: ""
 }));
 
-console.log(postsActions.validatePost(postsActions.getPostByID("8")));
+console.log(postsActions.validatePost(postsActions.getPostByID("12")));
+
+postsActions.editPost("12", {description: "New description!!!"});
+
+console.log(postsActions.getPhotoPosts(0, 20, ""));
+
 
 console.log(postsActions.getPhotoPosts(0,20,{
     tag: ["masha"]
@@ -187,6 +192,7 @@ console.log(postsActions.getPhotoPosts(0,20,{
 
 console.log(postsActions.getPostByID("2"));
 console.log(postsActions.removePost("66"));
+
 postsActions.addPost({
     id: "21",
     description: "Figure skating at the Olympiad-2018!",
@@ -196,8 +202,6 @@ postsActions.addPost({
     author: "Lana Rey",
     photoLink: "images/image-1.jpg"
 });
-
-console.log(postsActions.getPhotoPosts(0, 21, "", "", "", ""));
-postsActions.editPost("12", {description: "New description!!!"});
-console.log(postsActions.getPostByID("12"));
+console.log(postsActions.removePost("11"));
+console.log(postsActions.getPhotoPosts(0, 21, ""));
 

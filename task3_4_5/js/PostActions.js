@@ -1,4 +1,4 @@
-var manyPosts=[
+const photoPosts=[
     {
         id: "1",
         description: "Figure skating at the Olympiad-2018!",

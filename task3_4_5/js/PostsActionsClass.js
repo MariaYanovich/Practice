@@ -1,6 +1,6 @@
-class PostList {
+class PostsActionsClass {
     constructor(photoPosts) {
-        this.pP = photoPosts;
+        this._photoPosts = photoPosts;
     }
 
     sortPostsByDate(somePost) {
@@ -14,7 +14,7 @@ class PostList {
     }
 
     getPhotoPosts(skip = 0, top = 10, filterConfig) {
-        let res = photoPosts.slice();
+        let res = this._photoPosts.slice();
         this.sortPostsByDate(res);
         if (filterConfig.author) {
             res = res.filter(function (post) {
@@ -48,14 +48,14 @@ class PostList {
 
     getPostByID(id) {
         let flag = false;
-        for (let i = 0; i < photoPosts.length; i++) {
-            if (photoPosts[i].id === id) {
+        for (let i = 0; i < this._photoPosts.length; i++) {
+            if (this._photoPosts[i].id === id) {
                 flag = true;
-                return photoPosts[i];
+                return this._photoPosts[i];
             }
         }
         if (!flag) {
-            console.log("No such ID");
+            //console.log("No such ID");
             return flag;
         }
 
@@ -103,16 +103,16 @@ class PostList {
     }
 
     addPost(post) {
-        if (this.validatePost(post)) {
-            for (let i = 0; i < photoPosts.length; i++) {
-                if (photoPosts[i].id === post.id) {
-                    console.log("Post with the same ID already exists");
-                    return false;
-                }
+        try {
+            if (this.validatePost(post)) {
+                this._photoPosts.push(post);
+                return true;
             }
-            photoPosts.push(post);
-            return true;
-        } else return false;
+        }
+        catch (e) {
+            console.log("addPost error. " + e);
+            return false;
+        }
     }
 
     addAll(pP) {
@@ -136,11 +136,12 @@ class PostList {
         if (post.location) clone.location = post.location;
         if (post.author) clone.author = post.author;
         if (post.photoLink) clone.photoLink = post.photoLink;
+        if (post.likes) clone.likes = post.likes;
 
         if (this.validatePost(clone)) {
-            for (let i = 0; i < photoPosts.length; i++) {
-                if (photoPosts[i].id === postID) {
-                    photoPosts[i] = clone;
+            for (let i = 0; i < this._photoPosts.length; i++) {
+                if (this._photoPosts[i].id === postID) {
+                    this._photoPosts[i] = clone;
                     return true;
                 }
             }
@@ -148,68 +149,17 @@ class PostList {
     }
 
     clear(){
-        return photoPosts.length=0;
+        return this._photoPosts.length=0;
     }
 
     removePost(id) {
-        let index = 0;
-        for (let i = 0; i < photoPosts.length; i++) {
-            if (photoPosts[i].id === id) {
-                index = i;
-                break;
-            }
-        }
-        if (index === 0) {
-            console.log("No post with such id");
+        let index = this._photoPosts.findIndex((item)=>(item.id === id));
+        if (index === -1) {
+            console.log("no post with such id");
             return false;
         }
-        photoPosts.splice(index, 1);
+        this._photoPosts.splice(index, 1);
         return true;
     }
 }
 
-function Test() {
-    let model = new PostList(photoPosts);
-
-    console.log(model.getPhotoPosts(0, 20, ""));
-    console.log(model.getPhotoPosts(0, 20, {
-        author: "Lana Rey",
-        createdAt: new Date("11-08-2018")
-    }));
-
-    console.log(model.getPhotoPosts(0, 20, {
-        author: "Mara Rey",
-        createdAt: ""
-    }));
-    console.log(model.validatePost(model.getPostByID("12")));
-
-    model.editPost("12", {description: "New description!!!"});
-
-    console.log(model.getPhotoPosts(0, 20, ""));
-
-
-    console.log(model.getPhotoPosts(0, 20, {
-        tag: ["masha"]
-    }));
-
-    console.log(model.getPostByID("2"));
-    console.log(model.removePost("66"));
-
-    model.addPost({
-        id: "21",
-        description: "Figure skating at the Olympiad-2018!",
-        createdAt: new Date("01-07-2018"),
-        location: "Beijing, China",
-        tag: ['apps', 'sport'],
-        author: "Lana Rey",
-        photoLink: "images/image-1.jpg"
-    });
-    console.log(model.removePost("11"));
-    console.log(model.getPhotoPosts(0, 21, ""));
-    console.log(model.addAll(photoPosts));
-    console.log(model.clear());
-    console.log(model);
-
-}
-
-Test();

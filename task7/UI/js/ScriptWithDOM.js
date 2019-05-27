@@ -127,9 +127,9 @@ class Viewer{
 
 
 
-let View = new Viewer();
+let Posts = new Viewer();
 
-View.addPhotoPost({id: "20",
+Posts.addPhotoPost({id: "20",
     description: "Figure skating at the Olympiad-2018!",
     createdAt: new Date("04-12-2018"),
     location:"Beijing, China",
@@ -138,6 +138,6 @@ View.addPhotoPost({id: "20",
     photoLink: "images/image-2.jpg",
     likes: 1220});
 
-View.removePhotoPost("2");
+Posts.removePhotoPost("2");
 
-View.editPost("1", {description: "dfbjshfbwerfjnqkjfhbergu"});
+Posts.editPost("1", {description: "dfbjshfbwerfjnqkjfhbergu"});

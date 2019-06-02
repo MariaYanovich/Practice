@@ -71,7 +71,6 @@ public class PostServiceImpl implements PostService {
             return false;
         if(post.getCreationDate() == null || !isCorrectDate(post.getCreationDate()))
             return false;
-        // Массив лайков и хэштегов должен быть пуст, но не null
         if(post.getLikes() == null || post.getHashtags() == null)
             return false;
 

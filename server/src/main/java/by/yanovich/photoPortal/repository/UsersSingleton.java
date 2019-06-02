@@ -10,10 +10,10 @@ public class UsersSingleton {
     private List<User> users;
     private UsersSingleton() {
         this.users = new ArrayList<>(Arrays.asList(
-                new User("Alex", "123"),
-                new User("Natasha", "qwe"),
-                new User("Dima", "python"),
-                new User("Nikita", "moto")));
+                new User("Katya", "123"),
+                new User("Masha", "qwe"),
+                new User("Sasha", "python"),
+                new User("Liza", "moto")));
     }
     public List<User> getUsers(){
         return this.users;

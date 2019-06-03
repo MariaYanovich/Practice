@@ -1,0 +1,1 @@
+SELECT * FROM photoportal.photo_post order by CREATION_DATE;
